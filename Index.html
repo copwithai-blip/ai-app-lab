@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter App</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 28px 22px;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,.4);
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 8px; }
+    p { color: #94a3b8; margin-bottom: 20px; }
+    #count { font-size: 3rem; font-weight: 700; margin: 12px 0 20px; color: #38bdf8; }
+    button {
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 4px;
+      cursor: pointer;
+    }
+    button.secondary { background: #334155; color: #e2e8f0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🚀 Starter App</h1>
+    <p>Replace this with your next idea.</p>
+    <div id="count">0</div>
+    <button onclick="change(1)">+ Add</button>
+    <button class="secondary" onclick="reset()">Reset</button>
+  </div>
+
+  <script>
+    let n = 0;
+    const el = document.getElementById('count');
+    function change(d) { n += d; el.textContent = n; }
+    function reset() { n = 0; el.textContent = n; }
+  </script>
+</body>
+</html>
